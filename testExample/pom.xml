@@ -20,13 +20,13 @@
       <id>releases</id>
         <name>Releases</name>
       <!-- CHANGE HERE by your team nexus server -->
-      <url>http://35.193.102.152:2527/nexus/content/repositories/releases</url>
+      <url>http://35.202.108.190:2527/nexus/content/repositories/releases</url>
     </repository>
       
       <snapshotRepository>
       <id>snapshots</id>
        <name>Snapshots</name>
-      <url>http://35.193.102.152:2527/nexus/content/repositories/snapshots</url>
+      <url>http://35.202.108.190:2527/nexus/content/repositories/snapshots</url>
    </snapshotRepository>   
       
   </distributionManagement>
@@ -39,4 +39,17 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <build>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.3.0.603</version>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+</build>
+  
 </project>
